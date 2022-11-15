@@ -17,7 +17,7 @@ $check = $_POST['check'];
 $path = "../datafile/registo.txt";
 $file = fopen($path,"a+");
 if(file_exists("$path")){
-    $dados = "Nome: $nome $apelido\nEmail: $email\nPassword:$pass\nMorada:$morada, &morada2 - $cidade\nCódigo Postal:codPost, &cidade, $distrito\nData Início: $datai\nData Fim: dataf\n##########################\n";
+    $dados = "Nome: $nome $apelido\nEmail: $email\nPassword:$pass\nMorada:$morada, $morada2 - $cidade\nCódigo Postal: $codPost, $cidade, $distrito\nData Início: $datai\nData Fim: $dataf\n##########################\n";
     fwrite($file, $dados);
 
 }else{
